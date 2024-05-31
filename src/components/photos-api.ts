@@ -1,5 +1,12 @@
 import axios, { AxiosResponse } from 'axios';
+export interface User {
+  name: string;
+}
 
+export interface Urls {
+  small: string;
+  regular: string;
+}
 export interface Photo {
     alt_description: string;
     urls: Urls;

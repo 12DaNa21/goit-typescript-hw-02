@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageUrl, setSelectedImageUrl] = useState('');
 
-  const handleImageClick = (imageUrl: string) => {
+  const handleImgClick = (imageUrl: string) => {
     setSelectedImageUrl(imageUrl);
     setIsModalOpen(true);
   };
@@ -61,7 +61,7 @@ const App: React.FC = () => {
     <div className={css.container}>
       <SearchBar onSubmit={handleSearch} />
       {error && <ErrorMessage />}
-      {photos.length > 0 && <ImageGallery items={photos} onImageClick={handleImageClick} />} 
+      {photos.length > 0 && <ImageGallery items={photos} onImgClick={handleImgClick} />} 
       {isLoading && <Loader />}
       {photos.length > 0 && !isLoading && <LoadMoreBtn onClick={handleLoadMore} />}
 

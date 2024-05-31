@@ -4,7 +4,7 @@ import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loader from '../Loader/Loader';
 import ImageGallery from '../ImageGallery/ImageGallery';
-import { searchPhotos, Photo } from '../../photos-api';
+import { searchPhotos, Item } from '../../photos-api';
 import ImageModal from '../ImageModal/ImageModal';
 import css from './App.module.css';
 

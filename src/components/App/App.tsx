@@ -9,7 +9,7 @@ import ImageModal from '../ImageModal/ImageModal';
 import css from './App.module.css';
 
 const App: React.FC = () => {
-  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [photos, setPhotos] = useState<Item[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
   const [query, setQuery] = useState('');

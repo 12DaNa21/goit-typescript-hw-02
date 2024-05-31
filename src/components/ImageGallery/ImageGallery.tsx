@@ -12,7 +12,7 @@ interface Urls {
   regular: string;
 }
 
-interface Item {
+interface Photo {
   id: string;
   alt_description: string;
   urls: Urls;
@@ -21,7 +21,7 @@ interface Item {
 }
 
 interface ImageGalleryProps {
-  items: Item[];
+  items: Photo[];
   onImgClick: (url: string, likes: number, name: string) => void;
 }
 

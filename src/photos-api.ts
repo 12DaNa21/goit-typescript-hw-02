@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-export interface Item {
+export interface Photo {
   id: string;
   urls: {
     small: string;
@@ -9,10 +9,10 @@ export interface Item {
 }
 
 interface UnsplashResponse {
-  results: Item[];
+  results: Photo[];
 }
 
-export async function searchPhotos(query: string, page: number): Promise<Item[]> {
+export async function searchPhotos(query: string, page: number): Promise<Photo[]> {
   try {
     const response: AxiosResponse<UnsplashResponse> = await axios.get('https://api.unsplash.com/search/photos', {
       params: {

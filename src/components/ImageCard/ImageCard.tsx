@@ -13,7 +13,7 @@ interface Urls {
   regular: string;
 }
 
-interface Item {
+interface Photo {
   alt_description: string;
   urls: Urls;
   likes: number;
@@ -21,7 +21,7 @@ interface Item {
 }
 
 interface ImageCardProps {
-  item: Item;
+  item: Photo;
   onImgClick: (url: string, likes: number, name: string) => void;
 }
 

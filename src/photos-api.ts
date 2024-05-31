@@ -1,12 +1,11 @@
 import axios, { AxiosResponse } from 'axios';
 
 export interface Photo {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-}
+    alt_description: string;
+    urls: Urls;
+    likes: number;
+    user: User;
+  }
 
 interface UnsplashResponse {
   results: Photo[];

@@ -8,11 +8,12 @@ export interface Urls {
   regular: string;
 }
 export interface Photo {
-    alt_description: string;
-    urls: Urls;
-    likes: number;
-    user: User;
-  }
+  id: string;
+  alt_description: string;
+  urls: Urls;
+  likes: number;
+  user: User;
+}
 
 interface UnsplashResponse {
   results: Photo[];

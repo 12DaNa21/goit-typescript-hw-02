@@ -1,11 +1,12 @@
-import { useEffect, useState,} from 'react';
+import { useEffect, useState } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loader from '../Loader/Loader';
 import ImageGallery from '../ImageGallery/ImageGallery';
-import { searchPhotos, Photo } from '../../photos-api';
+import { searchPhotos, Photo } from '../../photos-api'; 
 import ImageModal from '../ImageModal/ImageModal';
+import css from './App.module.css';
 
 const App: React.FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -57,15 +58,15 @@ const App: React.FC = () => {
   }, [query, page]);
 
   return (
-    <>
+    <div className={css.container}>
       <SearchBar onSubmit={handleSearch} />
       {error && <ErrorMessage />}
-      {photos.length > 0 && <ImageGallery items={photos} onImgClick={handleImgClick} />}
+      {photos.length > 0 && <ImageGallery items={photos} onImgClick={handleImgClick} />} 
       {isLoading && <Loader />}
       {photos.length > 0 && !isLoading && <LoadMoreBtn onClick={handleLoadMore} />}
 
       <ImageModal isOpen={isModalOpen} onClose={handleModalClose} imageUrl={selectedImageUrl} />
-    </>
+    </div>
   );
 };
 

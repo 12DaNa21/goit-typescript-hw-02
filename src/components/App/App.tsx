@@ -1,4 +1,4 @@
-import { useEffect, useState, FC } from 'react';
+import { useEffect, useState} from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -61,7 +61,7 @@ const App: React.FC = () => {
     <div className={css.container}>
       <SearchBar onSubmit={handleSearch} />
       {error && <ErrorMessage />}
-      {photos.length > 0 && <ImageGallery items={photos} onImageClick={handleImageClick} />}
+      {photos.length > 0 && <ImageGallery items={photos} onImageClick={handleImageClick} />} 
       {isLoading && <Loader />}
       {photos.length > 0 && !isLoading && <LoadMoreBtn onClick={handleLoadMore} />}
 
